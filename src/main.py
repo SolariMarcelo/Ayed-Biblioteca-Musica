@@ -12,6 +12,15 @@ from src.excepciones import (
 from src.dominio.playlist import Playlist
 from src.tads.pila import Pila
 from src.tads.cola import Cola
+from src.algoritmos.busqueda import (
+    busqueda_lineal,
+    busqueda_binaria
+)
+
+from src.algoritmos.ordenamiento import (
+    ordenar_seleccion,
+    ordenar_insercion
+)
 
 
 
@@ -24,8 +33,8 @@ TEMAS = {
 }
 
 
-def pendiente():
-    print("Todavía no está implementado. Completar en la entrega que corresponde.")
+#def pendiente():
+#    print("Todavía no está implementado. Completar en la entrega que corresponde.")
 
 
 def mostrar_menu():
@@ -43,7 +52,128 @@ def mostrar_menu():
     print("9. Guardar / cargar archivos")
     print("0. Salir")
 
+#SUBMENU OPCION 3 BUSCAR-------------------------------------------------------------------------------------------------------
+def menu_buscar():
+    print("\n--- Buscar canciones ---")
+    print("1. Buscar por ID (lineal)")
+    print("2. Buscar por título (lineal)")
+    print("3. Buscar por artista (lineal)")
+    print("4. Buscar por ID (binaria)")
 
+    opcion = input("> ").strip()
+
+    if opcion == "1":
+        clave = input("Ingresá el ID: ").strip()
+
+        try:
+            clave = int(clave)
+        except ValueError:
+            print("El ID debe ser un número.")
+            return
+
+        resultado = busqueda_lineal(
+            CATALOGO,
+            clave,
+            obtener_clave=lambda cancion: cancion["id"]
+        )
+
+    elif opcion == "2":
+        clave = input("Ingresá el título: ").strip().lower()
+
+        resultado = busqueda_lineal(
+            CATALOGO,
+            clave,
+            obtener_clave=lambda cancion: cancion["titulo"].lower()
+        )
+
+    elif opcion == "3":
+        clave = input("Ingresá el artista: ").strip().lower()
+
+        resultado = busqueda_lineal(
+            CATALOGO,
+            clave,
+            obtener_clave=lambda cancion: cancion["artista"].lower()
+        )
+
+    elif opcion == "4":
+        clave = input("Ingresá el ID: ").strip()
+
+        try:
+            clave = int(clave)
+        except ValueError:
+            print("El ID debe ser un número.")
+            return
+
+        resultado = busqueda_binaria(
+            CATALOGO,
+            clave,
+            obtener_clave=lambda cancion: cancion["id"]
+        )
+
+    else:
+        print("Opción inválida.")
+        return
+
+    if resultado is None:
+        print("Canción no encontrada.")
+    else:
+        print("\nCanción encontrada:")
+        print(f"ID: {resultado['id']}")
+        print(f"Título: {resultado['titulo']}")
+        print(f"Artista: {resultado['artista']}")
+        print(f"Álbum: {resultado['album']}")
+        print(f"Género: {resultado['genero']}")
+        print(f"Año: {resultado['anio']}")
+        print(f"Duración: {resultado['duracion_seg']} segundos")
+
+#SUBMENU OPCION 4 ORDENAR------------------------------------------------------------------------------------------------
+def menu_ordenar():
+    print("\n--- Ordenar catálogo ---")
+    print("1. Selección")
+    print("2. Inserción")
+
+    algoritmo = input("Elegí el algoritmo: ").strip()
+
+    print("\nCriterio de ordenamiento:")
+    print("1. Título")
+    print("2. Artista")
+    print("3. Año")
+
+    criterio = input("Elegí el criterio: ").strip()
+
+    claves = {
+        "1": lambda cancion: cancion["titulo"].lower(),
+        "2": lambda cancion: cancion["artista"].lower(),
+        "3": lambda cancion: cancion["anio"]
+    }
+
+    if algoritmo not in {"1", "2"}:
+        print("Algoritmo inválido.")
+        return
+
+    if criterio not in claves:
+        print("Criterio inválido.")
+        return
+
+    catalogo_ordenado = CATALOGO.copy()
+    obtener_clave = claves[criterio]
+
+    if algoritmo == "1":
+        ordenar_seleccion(catalogo_ordenado, obtener_clave)
+        nombre_algoritmo = "Selección"
+    else:
+        ordenar_insercion(catalogo_ordenado, obtener_clave)
+        nombre_algoritmo = "Inserción"
+
+    print(f"\nCatálogo ordenado por {nombre_algoritmo}:")
+    for cancion in catalogo_ordenado:
+        print(
+            f"{cancion['titulo']} - "
+            f"{cancion['artista']} - "
+            f"{cancion['anio']}"
+        )
+
+#MAIN----------------------------------------------------------------------------------------------------------------------
 def main():
     if TEMA not in TEMAS:
         print("Seteá TEMA en src/config.py: 'pokedex', 'recetario' o 'musica'.")
@@ -64,6 +194,14 @@ def main():
                     print(cancion)
             except Exception as e:
                 print(f"Error al listar: {e}")
+        
+        
+        if opcion == "3":
+            menu_buscar()
+
+        
+        if opcion == "4":
+            menu_ordenar()
 
         if opcion == "5":
             biblioteca = Biblioteca()
@@ -79,7 +217,7 @@ def main():
                     "- Tipo:",
                     version["tipo"]
                 )
-        elif opcion == "6":
+        if opcion == "6":
             # Opción 6: Colección principal con tope
             print("\n--- Gestión de Playlist ---")
             print("1. Agregar canción")
@@ -108,7 +246,7 @@ def main():
                 except ColeccionLlenaError as e:
                     print(f"❌ {e} (Caso P05 superado con éxito)")
 
-        elif opcion == "7":
+        if opcion == "7":
             # Opción 7: Historial / Deshacer (Pila)
             print("\n--- Historial de Acciones (Pila) ---")
             try:
@@ -118,7 +256,7 @@ def main():
                 # Ítem 3.6: Captura estricta de PilaVaciaError (Nunca except pelado)
                 print(f"❌ {e}")
 
-        elif opcion == "8":
+        if opcion == "8":
             # Opción 8: Cola de reproducción (Cola)
             print("\n--- Cola de Reproducción ---")
             print("1. Encolar tema")
@@ -139,8 +277,10 @@ def main():
                 
         elif opcion == "0":
             print("Chau.")
-        elif opcion in { "2","3",  "4", "6", "8", "9"}:
-            pendiente()
+        
+        elif opcion in { "2", "9"}:
+            print("")
+           
         else:
             print("Opción inválida.")
 

@@ -49,8 +49,19 @@ Dónde se usa cada uno en el dominio.
 Mediciones (`time.perf_counter`):
 
 | Operación | n | segundos |
-| --- | --- | --- |
-|  |  |  |
+
+
+--- Catálogo original: 67 canciones ---
+Búsqueda lineal: 0.00001261 segundos
+Búsqueda binaria: 0.00000342 segundos
+Ordenamiento selección: 0.00112136 segundos
+Ordenamiento inserción: 0.00144788 segundos
+
+--- Catálogo ampliado: 500 canciones ---
+Búsqueda lineal: 0.00011024 segundos
+Búsqueda binaria: 0.00000528 segundos
+Ordenamiento selección: 0.04692904 segundos
+Ordenamiento inserción: 0.06195496 segundos
 
 ## 6. Persistencia (E5)
 

@@ -9,7 +9,7 @@ Fecha de esta versión del archivo:
 | E1 | 03/09/2026 | No usamos IA | --- | --- |--- |--- |
 | E2 | 20/09/2026 | ChatGPT | como ayuda en el llamada de la funcion recursiva en opcion == 5  |pegamos algunas lineas | reescritura de llamada al metodo "versiones_de()"  | todos |
 | E3 | 04/10/2026 | Gemini  | parte de codigo  de lista_enlazada.py y parte de pila.py |  parte de lineas de los metodos de las clases | reescribimos los metodos |  todos |
-| E4 |  |  |  |  |  |  |
+| E4 | 01/11/2026 | ChatGPT | codigo y debug | como ayuda en metodos de ordenamientos  | revision de los metodos de rodenamiento y en el algoritmo de medicion de rendimineto | todos |
 | E5 |  |  |  |  |  |  |
 | E6 |  |  |  |  |  |  |
 
