@@ -159,3 +159,5 @@ class Cancion:
     def listar_catalogo():
         for item in CATALOGO:
             print(f"{item['id']:>3}  {item['titulo']} {item['artista']} {item['album']} {item ['genero']} {item['anio']}  {item ['duracion_seg']}")
+
+    

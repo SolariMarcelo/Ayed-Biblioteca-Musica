@@ -1,0 +1,68 @@
+id|titulo|artista|album|anio|genero|duracion_seg
+1|De Musica Ligera|Soda Stereo|Cancion Animal|1990|Rock|213
+2|Persiana Americana|Soda Stereo|Signos|1986|Rock|263
+3|En la Ciudad de la Furia|Soda Stereo|Doble Vida|1988|Rock|351
+4|Crimen|Gustavo Cerati|Ahí vamos|2006|Rock|239
+5|Adios|Gustavo Cerati|Fuerza Natural|2009|Rock|233
+6|Muchacha ojos de papel|Luis Alberto Spinetta|Almendra|1969|Rock|203
+7|Cantata de Puentes Amarillos|Luis Alberto Spinetta|Artaud|1973|Rock|557
+8|Rasguña las Piedras|Sui Generis|Confesiones de Invierno|1973|Rock|196
+9|Seminare|Seru Giran|La Grasa de las Capitales|1979|Rock|241
+10|Los Dinosaurios|Charly Garcia|Clics Modernos|1983|Rock|241
+11|Demoliendo Hoteles|Charly Garcia|Piano Bar|1984|Rock|151
+12|Jijiji|Patricio Rey y sus Redonditos de Ricota|Un Baion para el Ojo Idiota|1988|Rock|316
+13|Ji Ji Ji|Patricio Rey y sus Redonditos de Ricota|En Directo|1992|Rock|318
+14|La Bestia Pop|Patricio Rey y sus Redonditos de Ricota|Oktubre|1986|Rock|240
+15|Alfonsina y el mar|Mercedes Sosa|Mujeres Argentinas|1969|Folklore|298
+16|Gracias a la Vida|Mercedes Sosa|Hasta la Victoria|1971|Folklore|271
+17|La Balsa|Los Gatos|Los Gatos|1967|Rock|187
+18|El Extraño de Pelo Largo|Almendra|Almendra|1969|Rock|198
+19|Flaca|Andres Calamaro|Honestidad Brutal|1999|Rock|263
+20|Lamento Boliviano|Los Enanitos Verdes|Big Bang|1994|Rock|223
+21|La Guitarra|Los Autenticos Decadentes|Mi Enfermedad|1997|Cumbia|201
+22|Waka Waka|Shakira|Sale el Sol|2010|Pop|202
+23|Bzrp Music Sessions Vol. 52|Bizarrap|Sessions|2022|Urbano|201
+24|Bzrp Music Sessions Vol. 53|Bizarrap|Sessions|2023|Urbano|194
+25|Natacha|Wos|Oscuro Extasis|2019|Urbano|183
+26|Canguros|Wos|Tres Puntos Suspensivos|2021|Urbano|176
+27|Buenos Aires|Nathy Peluso|Calambre|2020|Urbano|198
+28|Despecha|Rosalia|Motomami|2022|Pop|157
+29|Titi Me Pregunto|Bad Bunny|Un Verano Sin Ti|2022|Urbano|243
+30|Anti-Hero|Taylor Swift|Midnights|2022|Pop|201
+31|Blank Space|Taylor Swift|1989|2014|Pop|231
+32|Bohemian Rhapsody|Queen|A Night at the Opera|1975|Rock|354
+33|Bohemian Rhapsody (Live Aid)|Queen|Live Aid|1985|Rock|362
+34|Don't Stop Me Now|Queen|Jazz|1978|Rock|209
+35|Come Together|The Beatles|Abbey Road|1969|Rock|259
+36|Here Comes the Sun|The Beatles|Abbey Road|1969|Rock|185
+37|Get Lucky|Daft Punk|Random Access Memories|2013|Electronica|248
+38|One More Time|Daft Punk|Discovery|2000|Electronica|320
+39|Rolling in the Deep|Adele|21|2010|Pop|228
+40|Someone Like You|Adele|21|2011|Pop|285
+41|Do I Wanna Know|Arctic Monkeys|AM|2013|Rock|272
+42|505|Arctic Monkeys|Favourite Worst Nightmare|2007|Rock|214
+43|Blinding Lights|The Weeknd|After Hours|2019|Pop|200
+44|Levitating|Dua Lipa|Future Nostalgia|2020|Pop|203
+45|As It Was|Harry Styles|Harry's House|2022|Pop|167
+46|Smells Like Teen Spirit|Nirvana|Nevermind|1991|Rock|301
+47|Wonderwall|Oasis|What's the Story Morning Glory|1995|Rock|258
+48|Wonderwall (Live)|Oasis|Familiar to Millions|2000|Rock|265
+49|Take On Me|a-ha|Hunting High and Low|1985|Pop|225
+50|Africa|Toto|Toto IV|1982|Pop|296
+51|Billie Jean|Michael Jackson|Thriller|1982|Pop|294
+52|Billie Jean (Remix)|Michael Jackson|Thriller 40|2022|Pop|292
+53|Clocks|Coldplay|A Rush of Blood to the Head|2002|Rock|307
+54|Yellow|Coldplay|Parachutes|2000|Rock|269
+55|Creep|Radiohead|Pablo Honey|1992|Rock|238
+56|Karma Police|Radiohead|OK Computer|1997|Rock|261
+57|Vino Griego|Los Abuelos de la Nada|Vasos y Besos|1983|Rock|214
+58|Lunes Por La Madrugada|Los Abuelos de la Nada|Los Abuelos de la Nada|1982|Rock|241
+59|El Aguante|Divididos|Gol de Mujer|1998|Rock|245
+60|Que Ves|Divididos|Acariciando lo Aspero|1991|Rock|232
+61|Gracias a la Vida|Violeta Parra|Las Ultimas Composiciones|1966|Folklore|258
+62|De Musica Ligera (Unplugged)|Soda Stereo|Comfort y Musica Para Volar|1996|Rock|221
+63|Flaca (En vivo)|Andres Calamaro|Vivo|2000|Rock|270
+64|Creep (Live)|Radiohead|The Astoria London|1994|Rock|245
+65|Yellow (Live)|Coldplay|Live 2003|2003|Rock|280
+66|Blank Space (Acoustic)|Taylor Swift|1989|2014|Pop|228
+67|Get Lucky (Daft Punk Remix)|Daft Punk|Random Access Memories|2013|Electronica|248

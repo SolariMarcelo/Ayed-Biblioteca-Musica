@@ -65,9 +65,12 @@ Ordenamiento inserción: 0.06195496 segundos
 
 ## 6. Persistencia (E5)
 
-- Layout del registro binario (campos, `struct`, anchos):
-- Header:
-- Cómo se actualiza un registro por posición:
+- Layout del registro binario (campos, `struct`, anchos): `id` (`I`), `titulo` (`80s`), `artista` (`80s`), `album` (`80s`), `anio` (`H`), `genero` (`20s`) y `duracion_seg` (`I`). Formato little-endian (`<`), registro de 270 bytes.
+- Header: magia `AYED` (`4s`), tema (`c`, `M` para música) y cantidad de registros (`I`); ocupa 9 bytes.
+- Cómo se actualiza un registro por posición: se calcula `HEADER.size + posicion * REGISTRO.size`, se usa `seek()` y se sobrescribe únicamente el registro.
+- Alta y baja desde el CLI: se modifica la lista del catálogo y se guarda nuevamente el archivo binario porque cambia la cantidad de registros.
+- Modificación desde el CLI: se usa `actualizar_registro()` para escribir el registro en su posición, sin reescribir el archivo completo.
+- Al iniciar el programa, si existe `data/catalogo.bin`, se carga el catálogo persistido.
 
 ## 7. Reparto de trabajo (E6)
 
